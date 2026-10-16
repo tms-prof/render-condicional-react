@@ -1,4 +1,4 @@
-import useState from 'react';
+import {useState} from 'react';
 import Inicio from './components/Inicio';
 import Sobre from './components/Sobre';
 
