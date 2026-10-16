@@ -1,0 +1,54 @@
+
+/* Variáveis globais: permitem reutilizar valores e
+   alterar o tema do site em um único lugar. */
+:root {
+  --bg: #121212;       /* Fundo escuro da página */
+  --surface: #1e1e1e;  /* Fundo de cards e blocos */
+  --text: #f5f5f5;     /* Cor principal do texto */
+  --primary: #646cff;  /* Cor de destaque, como botões */
+  --radius: 8px;       /* Arredondamento padrão */
+}
+
+/* Remove margens e preenchimentos padrão do navegador.
+   border-box inclui padding e borda no cálculo da largura
+   e altura dos elementos. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais da página. */
+body {
+  font-family: Arial, sans-serif; /* Fonte simples e disponível */
+  background: var(--bg);          /* Usa a variável de fundo */
+  color: var(--text);             /* Define a cor do texto */
+  line-height: 1.5;                /* Melhora a leitura dos textos */
+}
+
+/* Elemento HTML onde o React renderiza a aplicação. */
+#root {
+  min-height: 100vh; /* Garante, no mínimo, a altura da tela */
+}
+
+/* Estilo básico para todos os botões. */
+button {
+  padding: 10px 16px;          /* Espaço interno do botão */
+  border: 0;                   /* Remove a borda padrão */
+  border-radius: var(--radius); /* Reutiliza o arredondamento */
+  background: var(--primary);  /* Usa a cor de destaque */
+  color: white;                /* Contraste com o fundo */
+  cursor: pointer;             /* Indica que é clicável */
+}
+
+/* Efeito visual quando o mouse passa sobre o botão. */
+button:hover {
+  opacity: 0.85; /* Reduz um pouco a opacidade */
+}
+
+/* Classe reutilizável para criar cards. */
+.card {
+  padding: 20px;                /* Espaço entre conteúdo e borda */
+  background: var(--surface);  /* Fundo diferente do body */
+  border-radius: var(--radius); /* Cantos arredondados */
+}
