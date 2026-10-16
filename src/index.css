@@ -1,4 +1,3 @@
-
 /* Variáveis globais: permitem reutilizar valores e
    alterar o tema do site em um único lugar. */
 :root {
@@ -29,7 +28,27 @@ body {
 /* Elemento HTML onde o React renderiza a aplicação. */
 #root {
   min-height: 100vh; /* Garante, no mínimo, a altura da tela */
+  display:flex;
+  flex-direction: column; /* Organiza header, main e footer verticalmente */
 }
+
+header, footer {
+  display:flex;
+  align-items: center;          /* Centraliza verticalmente */
+  justify-content: center; /* Espaço entre elementos */
+  padding: 20px;                /* Espaço interno do cabeçalho */
+  background: var(--surface);   /* Fundo diferente do body */
+  border-bottom: 1px solid #333; /* Linha sutil separando o header */
+}
+
+main {
+ display:flex;
+ justify-content: center; /* Centraliza horizontalmente */
+ flex:1; /* Faz o main ocupar o espaço restante */
+ padding: 20px; 
+                /* Espaço interno do conteúdo */
+}
+
 
 /* Estilo básico para todos os botões. */
 button {
@@ -52,3 +71,4 @@ button:hover {
   background: var(--surface);  /* Fundo diferente do body */
   border-radius: var(--radius); /* Cantos arredondados */
 }
+
